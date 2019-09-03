@@ -116,7 +116,7 @@ Troubleshooting:
  ```
       shell: |
          echo 'success' > /root/ansible
-            ```
+ ```
 
 
 
