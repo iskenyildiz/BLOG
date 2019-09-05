@@ -20,7 +20,7 @@ git push origin master
 ## Troubleshoot:
  
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/iskenyildiz/DHT11_portable.git'
+error: failed to push some refs to 'https://github.com/user/repo.git'
 hint: Updates were rejected because the tip of your current branch is behind
  
  
