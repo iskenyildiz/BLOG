@@ -1,7 +1,7 @@
-# BLOG
+# Modern Operating Systems 4th Edition--Andrew Tanenbaum
 
  
-Notes:
+# Notes:
 text interface-shell
 GUI- graphical user interface
 - A memory word is bytes of memory
@@ -10,7 +10,7 @@ GUI- graphical user interface
 - Shell-GUI are the lowest level of software, allows user to start other programs
 - OS software cannot be changed
 - Everything running in kernel mode is part of OS but some that do not are also part of it or at least associated with it(password system)
-HISTORY OF OPERATING SYSTEMS
+# HISTORY OF OPERATING SYSTEMS
 - Babbage and Ada created the first computer.
 - Plugboards were used to write data then punch cards were created.
 - How the batch system worked was you first wrote code on paper then punch it into cards. Then hand it to operators in the input room.
@@ -35,13 +35,13 @@ HISTORY OF OPERATING SYSTEMS
 - Multiprogramming is used to keep CPU all the time
 - Windows had windows on top of MS-DOS for GUI.
 - Win95 came with abilities more like an OS. Then came 98 then XP and so on.
-PROCESSORS/MEMORY/ I/0 DEVICES/BUSES/BOOTING
-Processor
+# PROCESSORS/MEMORY/ I/0 DEVICES/BUSES/BOOTING
+## Processor
 - Stack pointer register points to the top of stack.
 - CPU fetches, decodes then executes.
 - Pipeline: while process n is being executed , n+1 is decoded and n+2 is fetched.
 - Superscalar CPU does pipeline in parallel and holds data in buffer until there is room for execution. hardware handles the FIFO part.
-Memory
+## Memory
 - Having a memory both fast and cheap isn't possible in todays standards so another approach is taken.
 - Memory is a herarchy of layers. Top layer, higher speed/lower capacity/greater cost per bit.
 - Registers are as fast as CPU <1kB
@@ -53,20 +53,20 @@ Memory
 - Disks are larger than RAM thus slower.
 - SSD are not disks but are flash memory to hold lots of data.
 - Virtual memory is to run programs larger than physical memory. By placing programs on the disk and using RAM as cache for most executed parts of program.
-Buses
+## Buses
 -A shared bus architecture means that multiple devices use the same wires to transfer data.
 - Parallel bus architecture means you send data through multiple wires.
 - When you have multiple data you need to decide which data will use the bus. PCIe bus invented by Intel does this by using point to point connections on a serial bus architecture.
 - When two network cards use same interrupt it leads to misconceptions. Solution is to inform user to set other interrupts that don't conflict.
-I/O Devices
+## I/O Devices
 - I/O devices have device drivers and controllers in them as sort of an interface for OS to communicate with.
 - Any device connected to the computer is connected by a plug and socket, and the socket is connected to a device controller.
 - Device driver is just a code which helps devices be compatible , recognizable and lets controller communicate with OS.
-BOOTING
+## BOOTING
 - Motherboard has BIOS, low level I/0 software that has instructions on what to load at boot.
 - BIOS checks devices attached using PCIe.
-OPERATING SYSTEM ZOO
--OS Types:
+# OPERATING SYSTEM ZOO
+## -OS Types:
 + Mainframe (room sized computers with  very high I/O capacity. They are created to process many jobs at once. They do batch, transaction processing, and timesharing. OS/390 is  an example but Linux is used nowadays.)
 + Server (They run on servers, which are either very large personal computers, workstations, or even mainframes.)
 + Multiprocessor with multiple CPU
@@ -76,7 +76,7 @@ OPERATING SYSTEM ZOO
 + Sensor-node (detects fire, forecast, guards national borders. Communicate using wireless communication. They are real computers, have event driven OS, responding to external events or making periodical measurements, TinyOS)
 + Real time OS (guarantees certain action occurs in certain time, soft real-time system can accept some misses. Digital audio or smartphones.)
 + Smart Cards OS (credit card sized devices with CPU chips. Can only do single function like digital payment.)
-OPERATING SYSTEM CONCEPTS
+# OPERATING SYSTEM CONCEPTS
 - Two main functions:  providing abstractions to user programs and managing the computer’s resources.
 - Each process is associated with an address space, a list of memory locations which process can read and write.
 - Address space contains executable program, program's data and its stack. Briefly all the memory process can address.
@@ -92,7 +92,7 @@ OPERATING SYSTEM CONCEPTS
 - Special files are located in /dev directory
 - Pipes connect two processes, unidirectional.
 - files have protection bits rwxr-x--x(first 3 are for user, following 3 are for other groups, last 3 are for those not part of anything former)
-SYSTEM CALLS
+# SYSTEM CALLS
 - cat file1 file2 file3 | sort > /dev/lp & ( puts files together, sorts them, output is redirected to file, usually printer. putting & at the end immediately pops prompt and command is ran in background.)
 - 7094 had roughly over 128kB memory even OS was in assembly to save memory.
 - 7094 had no protection, 360 could hold several programs in memory at the same time and let them take turns running.
@@ -101,22 +101,22 @@ SYSTEM CALLS
 - CDC 6600 in 1964 was the fastest computer for years.
 - When microcomputers came out CP/M was leading the market but it too had supported just one directoryon the floppy disk.
 - Library procedure puts system calls into register. Then it executes TRAP to switch to kernel mode and start execution. After TRAP kernel code examines system call number then dispatches to correct system call handler. After it's done control returns to user space library procedure then it returns to user program.
-System Calls for Process Management
+## System Calls for Process Management
 - Fork creates child process, the same as parent process only distinguishable by fork call. Return value 0 for child PID for parent.
 - When program is read from terminal child is forked and waits for it to finish using waitpid.
 - Child executes user command using execve command.
 - Process has 3 segments: text, data, stack.
-System Calls for File Management
+## System Calls for File Management
 - open, close, read, write.
 - To read or write a file you must first open it.
-System Calls for Directory Management
+##System Calls for Directory Management
 - mkdir/rmdir, link/unlink, mount/unmount,
 - link call makes a file appear under two names. Two users at other groups can simultaneously access and write into it. Every directory has an i number located in a table called i-nodes. What link does is it creates a directory with the same i node as the other directory and links them together.
 - mount call merges two file systems into one.
-Miscellaneous
+## Miscellaneous
 - chdir, chmod, kill
 - chdir sys call executes cd command.
-WIN32 API
+# WIN32 API
 - Win32 is used to get OS services.
 - Windows system calls are win32 procedures that are guaranteed to be stable over time.
 - no parent child hierarchy on WIN
@@ -125,13 +125,13 @@ WIN32 API
 - WaitForSingleObject is used to wait for an event.
 - Win32 interface does not link files, have mounted file systems, security, or signals, so the calls corresponding to the UNIX ones do not exist.
 - link, execve, chmod, mount, kill are not supported on Win32.
-OPERATING SYSTEM STRUCTURE
-Monolithic System
+# OPERATING SYSTEM STRUCTURE
+## Monolithic System
 - Monolithic systems' entire os runs as single program in kernel mode. The operating system is written as a collection of procedures, linked together into a single large executable program. Single crash takes down entire OS
 - Monolithic system structure: Main Procedure->Service Procedures( for system calls)-> Utility Procedures(to help system calls).
 - In addition to core OS, many OS let us use shared libraries in UNIX such as I/O drivers and file systems, or DLL(dynamic link libraries) in Windows.
 
-Layered System
+## Layered System
 - Layered system was a natural evolution of monolithic system as a generalization and first created by Dijkstra and his students in 1968.
 - MULTICS generalized the layered system.
 - Layered approach let designers have a choice where to put layers to. Having all in kernel could result in crashes but user mode allowed safety.
@@ -144,13 +144,13 @@ Layered System
 0 Processor allocation and multiprogramming
 - Running each device in user mode will prevent bugs in their software to crash the system.
  
-Microkernel
+## Microkernel
 - Microkernel handles interrupts, processes, scheduling, interprocess communication.
 - Microkernel splits the OS into modules which don't run in kernel mode but user mode. This improves reliability of the system since now a crash in a process which would previously run in monolithic system would not crash the entire system, only itself.
 
-Client-server System
+## Client-server System
 - On a client-server system either in a single computer or more than one computers, the client sends a message to the server and server takes the message and replies back depending on if it's available or not.
-Virtual Machines
+## Virtual Machines
 - Official IBM timesharing system of OS/360 is TSS/360 which was abandoned after the development consumed so much money.
 - z/VM was created as a radically different system that IBM accepted.
 - VM/370 was based on timesharing and multiprogramming and a convenient interface than bare hardware.
@@ -161,7 +161,7 @@ Virtual Machines
 - A Hypervisor also known as Virtual Machine Monitor (VMM) can be a piece of software or hardware that gives an impression to the guest machines(virtual machines) as if they were operating on a physical hardware.
 - Type 2 hypervisors were built on top of an existing OS so it could rely on existing OS to handle manage calls to CPU.
  
-Exokernel
+## Exokernel
 - Exokernel lets us save a certain size of disk for virtualization, thus lets us run operating systems on them.
 - Exokernel also checks if somebody is trying to use an other's resources.
 - On other VM implementations, VM thinks it has its own disk to use, so it needs mapping to reach those disk addresses. With exokernel this is not needed since all exokernel needs is knowing which  VM is assigned to which resource.
