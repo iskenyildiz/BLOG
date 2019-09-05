@@ -11,9 +11,11 @@ UDS is bidirectional so both ends of the socket can do read/write operations.
 
 Unix Sockets are files so the location of UDS is defined by a folder path instead of IP address and port.
  
+ 
 `
  isken/. . . / . . . .socket
 `
+
 This is done so that sockets can edit who can access the socket.
 
 Instead of Network Sockets which need routing to go to other end, UDS knows that it is executing on the same system, therefore no need for routing, making them faster than IP sockets.
@@ -59,7 +61,7 @@ After this ends the connections are cut.
 
 [![rzab6503.gif](https://i.postimg.cc/DfL44w6R/rzab6503.gif)](https://postimg.cc/HjWkfHft)
 
-## IP/Network Sockets
+# IP/Network Sockets
 
 IP sockets are used for processes at distinct hosts to communicate. Layer 3 comes into play here since we need routing.
 
