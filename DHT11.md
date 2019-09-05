@@ -8,7 +8,7 @@ NoSQL (created in 1998)  is a non relational database which is easy to scale. No
 
 SQL uses SQL language for defining and manipulating data, NoSQL uses Unstructured Query language (UnQL).
 
-
+[![SQLvs-No-SQL.jpg](https://i.postimg.cc/j2GwpXwv/SQLvs-No-SQL.jpg)](https://postimg.cc/JH5zJjQB)
 
 SQL databases are better for complex queries.
 
@@ -33,7 +33,7 @@ https://www.softwaretestinghelp.com/sql-vs-nosql/
 
 Docker is a bit like a virtual machine. But unlike a virtual machine, rather than creating a whole virtual operating system, Docker allows applications to use the same Linux kernel as the system that they're running on. This gives a significant performance boost and reduces the size of the application.
 
-
+[![linux-containers.png](https://i.postimg.cc/0N2YdVpJ/linux-containers.png)](https://postimg.cc/ZW2vJFsT)
 
 
 # InfluxDB
