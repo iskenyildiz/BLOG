@@ -1,4 +1,4 @@
-# BLOG
+
 
 # SQL vs NOSQL
 
