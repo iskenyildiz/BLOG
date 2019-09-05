@@ -180,7 +180,7 @@ It's sometimes referred to as a process information pseudo-file system. It doesn
 
 The bind mounts are necessary if you want to have access to things like block devices (which are at /dev), an internet connection, and other services managed/started by the kernel on boot.
 ```
-mount --types proc /proc /mnt/gentoo/proc
+ mount --types proc /proc /mnt/gentoo/proc
  mount --rbind /sys /mnt/gentoo/sys
  mount --make-rslave /mnt/gentoo/sys
  mount --rbind /dev /mnt/gentoo/dev
