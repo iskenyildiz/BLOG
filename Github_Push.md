@@ -2,7 +2,8 @@
 
 
 Open Terminal.
-    • Change the current working directory to your local repository.
+
+• Change the current working directory to your local repository.
 
 `
 git add .
