@@ -54,7 +54,7 @@ GUI- graphical user interface
 - SSD are not disks but are flash memory to hold lots of data.
 - Virtual memory is to run programs larger than physical memory. By placing programs on the disk and using RAM as cache for most executed parts of program.
 ## Buses
--A shared bus architecture means that multiple devices use the same wires to transfer data.
+- A shared bus architecture means that multiple devices use the same wires to transfer data.
 - Parallel bus architecture means you send data through multiple wires.
 - When you have multiple data you need to decide which data will use the bus. PCIe bus invented by Intel does this by using point to point connections on a serial bus architecture.
 - When two network cards use same interrupt it leads to misconceptions. Solution is to inform user to set other interrupts that don't conflict.
