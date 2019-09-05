@@ -131,6 +131,8 @@ GUI- graphical user interface
 - Monolithic system structure: Main Procedure->Service Procedures( for system calls)-> Utility Procedures(to help system calls).
 - In addition to core OS, many OS let us use shared libraries in UNIX such as I/O drivers and file systems, or DLL(dynamic link libraries) in Windows.
 
+[![Screenshot-from-2019-07-30-12-00-25.png](https://i.postimg.cc/j2SNcdwT/Screenshot-from-2019-07-30-12-00-25.png)](https://postimg.cc/7GjfY4nt)
+
 ## Layered System
 - Layered system was a natural evolution of monolithic system as a generalization and first created by Dijkstra and his students in 1968.
 - MULTICS generalized the layered system.
@@ -147,6 +149,8 @@ GUI- graphical user interface
 ## Microkernel
 - Microkernel handles interrupts, processes, scheduling, interprocess communication.
 - Microkernel splits the OS into modules which don't run in kernel mode but user mode. This improves reliability of the system since now a crash in a process which would previously run in monolithic system would not crash the entire system, only itself.
+
+[![Screenshot-from-2019-07-30-12-02-24.png](https://i.postimg.cc/k4pXrnYq/Screenshot-from-2019-07-30-12-02-24.png)](https://postimg.cc/bD1jkjjB)
 
 ## Client-server System
 - On a client-server system either in a single computer or more than one computers, the client sends a message to the server and server takes the message and replies back depending on if it's available or not.
