@@ -42,3 +42,7 @@
 `
     sudo reboot
 `
+
+- Make sure that you give the absolute location to files in the scripts you will be running using crontab.
+
+  For example on bash.sh and tempgps.py give full directories to the files you will be writing to/running.
