@@ -27,10 +27,9 @@
 
    or
 
+
 `
-
     @reboot /home/pi/dht11/temp.sh
-
 `
 
 
