@@ -9,6 +9,7 @@ Our topology looks like this:
 Here we will be sending tagged VLAN frames which will be done between two IPs in two servers.
 
 VLAN10: 192.168.10.2 192.168.10.3
+
 VLAN20: 192.168.20.2 192.168.20.3
 
 We won't be doing VLAN routing so communications will only be between the IPs inside the same VLAN.
