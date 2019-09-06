@@ -22,14 +22,14 @@
 
 
 `
-    @reboot python3 /.../your_script.py &
+    @reboot python3 /.../your_script.py & ( for python scripts)
 `    
 
    or
 
 
 `
-    @reboot /home/pi/dht11/temp.sh
+    @reboot /home/pi/dht11/temp.sh (for bash scripts)
 `
 
 
