@@ -22,7 +22,15 @@
 
 
 `
-    @reboot python /bin/your_script.py &
+    @reboot python3 /.../your_script.py &
+`    
+
+   or
+
+`
+
+    @reboot /home/pi/dht11/temp.sh
+
 `
 
 
