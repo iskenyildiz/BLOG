@@ -27,3 +27,5 @@ hint: Updates were rejected because the tip of your current branch is behind
 `
 git rebase origin/master
 `
+
+https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
