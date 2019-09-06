@@ -5,9 +5,9 @@
  Copy the python file to /bin:
     
     
-```
+`
     sudo cp -i /path/to/your_script.py /bin
-```
+`
 
   Add A New Cron Job:
     
