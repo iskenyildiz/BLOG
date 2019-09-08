@@ -127,6 +127,8 @@ db.127 and db.local are the pre-made templates for us to work on them.
 sudo nano /etc/bind/zones/iskenhub.info
 `
 
+Make sure that you increase the Serial number every time you make a change on the file or else it won't notice the differences and won't update itself.
+
 ```
 ; BIND data file for local loopback interface
 ;
