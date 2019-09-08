@@ -7,6 +7,11 @@ sudo apt-get update
 ``
 sudo apt-get upgrade
 ``
+Bind uses port 53 for zone file transfers make sure you have port 53 allowed on both machines.
+
+`
+sudo ufw allow 53
+`
 
 Next proceed to install BIND and its utilities to both DNS machines.
 
@@ -229,7 +234,13 @@ dig iskenhub.info @localhost
 
 You should be getting the Website address after the query.
 
+To see the statistics of the website from an other host use
 
+`
+dig -t ns 192.168.56.101
+`
+
+`netstat -nltp` gives you the ports open on the machine. Check it for port 53.
 
 
 
