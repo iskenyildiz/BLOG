@@ -12,6 +12,8 @@ Here we will be sending tagged VLAN frames which will be done between two IPs in
 
 ## VLAN20: 192.168.20.2 192.168.20.3
 
+Each server will have both a VLAN10 IP and VLAN20 IP.
+
 We won't be doing VLAN routing so communications will only be between the IPs inside the same VLAN.
 
 First start the system and open switch terminal.
