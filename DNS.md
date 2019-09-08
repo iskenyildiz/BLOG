@@ -124,7 +124,7 @@ sudo cp /etc/bind/db.local /etc/bind/zones/db.iskenhub.info
 db.127 and db.local are the pre-made templates for us to work on them.
 
 `
-sudo nano /etc/bind/zones/iskenhub.info
+sudo nano /etc/bind/zones/db.iskenhub.info
 `
 
 Make sure that you increase the Serial number every time you make a change on the file or else it won't notice the differences and won't update itself.
@@ -266,7 +266,7 @@ dig -t ns 192.168.56.101
 `netstat -nltp` gives you the ports open on the machine. Check it for port 53.
 
 
-
+https://intodns.com/ is a great site to test the validity of your DNS setup.
 
 
 
