@@ -14,7 +14,7 @@ VLAN20: 192.168.20.2 192.168.20.3
 
 We won't be doing VLAN routing so communications will only be between the IPs inside the same VLAN.
 
-First start the switch.
+First start the system and open switch terminal.
 
 ```
 ***************************************************************
