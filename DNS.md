@@ -7,6 +7,7 @@ sudo apt-get update
 ``
 sudo apt-get upgrade
 ``
+
 Bind uses port 53 for zone file transfers make sure you have port 53 allowed on both machines.
 
 `
