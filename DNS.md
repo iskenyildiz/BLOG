@@ -2,6 +2,11 @@
 
 To get more info about DNS, visit: https://www.cloudflare.com/learning/dns/what-is-dns/
 
+
+We will be using Master-server hierarchy for this blog.
+
+The master server holds the zone files for answering queries, slave comes in to play as a backup server in case of emergencies or system failures. 
+
 ``
 sudo apt-get update
 ``
@@ -11,6 +16,8 @@ sudo apt-get upgrade
 ``
 
 Bind uses port 53 for zone file transfers make sure you have port 53 allowed on both machines.
+
+Bind is used to make our server a DNS server.
 
 `
 sudo ufw allow 53
