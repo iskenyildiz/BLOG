@@ -260,7 +260,7 @@ You should be getting the Website address after the query.
 To see the statistics of the website from an other host use
 
 `
-dig -t ns 192.168.56.101
+dig -t ns 34.90.10.12
 `
 
 `netstat -nltp` gives you the ports open on the machine. Check it for port 53.
