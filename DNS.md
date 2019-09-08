@@ -1,5 +1,7 @@
 # Ubuntu 18.04 Authoritative-Only DNS using BIND
 
+To get more info about DNS, visit: https://www.cloudflare.com/learning/dns/what-is-dns/
+
 ``
 sudo apt-get update
 ``
