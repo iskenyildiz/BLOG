@@ -89,7 +89,20 @@ You are done with the switch. You can see the trunked interfaces using
 show interface switchport
 `
 
+After that boot the virtual machines.
 
+Go to the network interfaces file which has been renamed as netplan and formatted as a YAML file for 18.04.
+
+Your file should look like this after the changes:
+
+
+[![v-Untitled.png](https://i.postimg.cc/5tdJJLPN/v-Untitled.png)](https://postimg.cc/VJRpBrQ3)
+
+Do the same for the other server but with the different IPs stated at the start.
+
+Now after we ping any of the vlans we should se the VLAN tag on wireshark.
+
+[![pingd.png](https://i.postimg.cc/L438T9H0/pingd.png)](https://postimg.cc/4nnG4THz)
 
 
 
