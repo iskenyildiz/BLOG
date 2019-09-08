@@ -149,6 +149,25 @@ ns2     IN      A       192.168.56.102
 www     IN      A       34.90.10.12
 ```
 
+### An A record is the record that points the Domain name to the IP address.
+
+### An NS record is to define the nameservers of the web server.
+
+### '@' is loopback (points to the self.).
+
+
+According to RFC1537 SOA(Start of Authority) Records below are recommended for a DNS server.
+
+### YYYYMMDD (2019-09-01); Traditional Serial
+
+### 28800; Refresh (8 hours) The time interval (in seconds) before the zone should be refreshed.
+ 
+### 7200; Retry (2 hours) The time interval (in seconds) before a failed refresh should be retried.
+
+### 604800; Expire (7 days) Seconds before a zone is no longer considered authoritative.
+
+### 86400; Minimum TTL (1 day)
+
 
 Then edit the reverse zone file.
 
@@ -172,6 +191,8 @@ $TTL    86400
 102     IN      PTR     ns2.iskenhub.info. 
 12     IN      PTR     www.iskenhub.info. 
 ```
+
+### PTR record is the Reverse record that points the IP back to the domain name.
 
 Control the syntax errors on zone files
 
