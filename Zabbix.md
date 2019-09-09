@@ -1,5 +1,11 @@
 # Monitoring systems with Zabbix
 
+Zabbix is a system monitoring tool that is highly popular among system administrators.
+
+For this system we will be using a Zabbix Server and Zabbix Agent(s).
+
+Zabbix server is used to monitoring the agents and agents will be configured to allow monitoring via Zabbix agent files.
+
 `
 sudo apt install update
 `
