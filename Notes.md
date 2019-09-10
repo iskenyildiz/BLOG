@@ -43,3 +43,9 @@ InfluxDB is a time series database (TSDB) is a database optimized for time-stamp
 Grafana is one of the most popular time series data visualization tools.
 
 Legacy system refers to outdated computer systems, programming languages or app software that are used instead of available upgraded versions.
+
+- Changes owner of a file.
+
+`
+chown user filename
+`
