@@ -17,22 +17,23 @@ VPNs are good for masking your activity online. In contrast, a proxy server does
 
 ## Forward and reverse proxy servers
 
-Forward proxies send requests of client to the web server.
+- Forward proxies send requests of client to the web server.
 
-Reverse proxy is the server that sits in front of web servers and forwards client requests to those web servers.
+- Reverse proxy is the server that sits in front of web servers and forwards client requests to those web servers.
 
-Forward proxies make sure no origin servers communicate directly with the specified client server.
+- Forward proxies make sure no origin servers communicate directly with the specified client server.
 
-Reverse proxies are used to make sure no client server directly communicates with the origin server.
+- Reverse proxies are used to make sure no client server directly communicates with the origin server.
 
-Open proxy is accessible by any internet user that changes their IP address once used.
+- Open proxy is accessible by any internet user that changes their IP address once used.
 
-An origin server is the server that responds to client requests. 
+- An origin server is the server that responds to client requests. 
 
-DNS proxies forward DNS requests from LANs to DNS servers while caching for increased speed. 
+- DNS proxies forward DNS requests from LANs to DNS servers while caching for increased speed. 
 
-The only real privacy element of a proxy is that they hide our IP address. There aren’t any encryption elements like in a VPN so our traffic can be accessed. To fully stay protected in the long term, VPN is the greater solution if one can afford its processing and money costs.
- VPN is also inserted to the operating system so it captures all the traffic from our system instead of a proxy which only protects whatever application it is attached to(HTTP, SSL, FTP etc.)
+ The only real privacy element of a proxy is that they hide our IP address. There aren’t any encryption elements like in a VPN so our traffic can be accessed. To fully stay protected in the long term, VPN is the greater solution if one can afford its processing and money costs.
+ 
+  VPN is also inserted to the operating system so it captures all the traffic from our system instead of a proxy which only protects whatever application it is attached to(HTTP, SSL, FTP etc.)
 
 ## HAPROXY
 
@@ -42,9 +43,9 @@ The only real privacy element of a proxy is that they hide our IP address. There
 
 ## Load Balancing Methods
 
-The round robin method, the load balancing default cycles through a list of servers in sequential order.
+- The Round Robin method, the load balancing default cycles through a list of servers in sequential order.
 
-Leastconn method  selects the server with the least number of connections. Not recommended for longer sessions.
+- Leastconn method  selects the server with the least number of connections. Not recommended for longer sessions.
 
 
 
