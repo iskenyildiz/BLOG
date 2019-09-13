@@ -37,10 +37,14 @@ The only real privacy element of a proxy is that they hide our IP address. There
 ## HAPROXY
 
  HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP (layer 4 and layer 7) Load Balancer and proxying solution which can be run on Linux.
+ 
+ [![ha-diagram-animated.gif](https://i.postimg.cc/g0f7g6TJ/ha-diagram-animated.gif)](https://postimg.cc/8Fmw5sDQ)
+
+## Load Balancing Methods
 
 The round robin method, the load balancing default cycles through a list of servers in sequential order.
 
-Leastconn selects the server with the least number of connections. Not recommended for longer sessions.
+Leastconn method  selects the server with the least number of connections. Not recommended for longer sessions.
 
 
-[![ha-diagram-animated.gif](https://i.postimg.cc/g0f7g6TJ/ha-diagram-animated.gif)](https://postimg.cc/8Fmw5sDQ)
+
