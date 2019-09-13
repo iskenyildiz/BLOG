@@ -43,3 +43,4 @@ The round robin method, the load balancing default cycles through a list of serv
 Leastconn selects the server with the least number of connections. Not recommended for longer sessions.
 
 
+[![ha-diagram-animated.gif](https://i.postimg.cc/g0f7g6TJ/ha-diagram-animated.gif)](https://postimg.cc/8Fmw5sDQ)
