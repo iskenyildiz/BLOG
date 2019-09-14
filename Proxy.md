@@ -92,6 +92,18 @@ backend section is the servers that fulfill the requests.
 
 Next see if you made any syntax errors.
 
+You can use `listen` as an alternative to merge frontend and backend into one.
+
+```
+listen firstbalance
+        bind 192.168.185.7:80
+        balance roundrobin
+        option forwardfor
+        option httpchk
+        server webserver1 Your-Webserver1-IP:80 check
+        server webserver2 Your-Webserver2-IP:80 check
+```
+
 `
 haproxy -c -f /etc/haproxy/haproxy.cfg
 `
