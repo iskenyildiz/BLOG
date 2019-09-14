@@ -86,7 +86,9 @@ backend my_webs
     server web1.com 192.168.185.3:80
     server web2.com 192.168.185.4:80
 ```
-The frontend is used to bind the haproxy to the IP address that will be the floating(Virtual) IP which will keep redirecting to those two servers using the round robin balancing method which will be going back and forth using a round table method.
+The frontend is used to accept requests from clients by  binding the haproxy to the IP address that will be the floating(Virtual) IP which will keep redirecting to those two servers using the round robin balancing method which will be going back and forth using a round table method.
+
+backend section is the servers that fulfill the requests.
 
 Next see if you made any syntax errors.
 
@@ -101,3 +103,5 @@ sudo systemctl restart haproxy
 `
 
 then go to http://192.168.185.7 and keep reloading the site to see both web servers you declared.
+
+https://www.haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/ for more information about the config files.
