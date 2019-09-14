@@ -49,3 +49,55 @@ VPNs are good for masking your activity online. In contrast, a proxy server does
 
 
 
+# Configuring HAProxy for HTTP load balancing
+
+first update your system
+
+`sudo apt update
+`
+
+then install haproxy
+
+`
+sudo apt install haproxy
+`
+
+Go to the haproxy configuration file where we will be adding the servers to load balance.
+
+` 
+sudo vi /etc/haproxy/haproxy.cfg
+`
+
+Inside add the following according to your IP addresses.
+
+```
+frontend local_server
+        bind 192.168.185.7:80
+        mode http
+        default_backend my_webs
+
+backend my_webs
+    mode http
+    balance roundrobin    
+    option forwardfor
+    http-request set-header X-Forwarded-Port %[dst_port]
+    http-request add-header X-Forwarded-Proto https if { ssl_fc }
+    option httpchk HEAD / HTTP/1.1rnHost:localhost
+    server web1.com 192.168.185.3:80
+    server web2.com 192.168.185.4:80
+```
+The frontend is used to bind the haproxy to the IP address that will be the floating(Virtual) IP which will keep redirecting to those two servers using the round robin balancing method which will be going back and forth using a round table method.
+
+Next see if you made any syntax errors.
+
+`
+haproxy -c -f /etc/haproxy/haproxy.cfg
+`
+
+Restart haproxy 
+
+`
+sudo systemctl restart haproxy
+`
+
+then go to http://192.168.185.7 and keep reloading the site to see both web servers you declared.
