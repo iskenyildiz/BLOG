@@ -150,7 +150,7 @@ vrrp_instance VI_1 {
         virtual_router_id 51
         priority 101                    # 101 on master, 100 on backup
         virtual_ipaddress {
-            192.168.185.2
+            192.168.185.10
         }
         track_script {
             chk_haproxy
@@ -158,12 +158,14 @@ vrrp_instance VI_1 {
 }
 ```
 
-do the same steps for the slave haproxy server but change the priority to '100'.
+do the same steps for the slave haproxy server but change the priority to '100' and state to 'BACKUP'.
 
 `
 systemctl start keepalive
 `
 
-`ip addr sh enp0s3` and you should see the virtual address on the master server.
+`ip addr sh enp0s3` to apply the changes and you should see the virtual address on the master server.
 
 To test it first go to the virtual address and then stop the master server and try it again to see if it redirects to the slave server.
+
+also you can see the change in virtual IP by looking at `systemctl status keepalived` or `ip a` to see if slave gets the Virtual IP.
