@@ -97,11 +97,11 @@ You can use `listen` as an alternative to merge frontend and backend into one.
 ```
 listen firstbalance
         bind 192.168.185.7:80
+        mode http
         balance roundrobin
         option forwardfor
-        option httpchk
-        server webserver1 Your-Webserver1-IP:80 check
-        server webserver2 Your-Webserver2-IP:80 check
+        server webserver1 Your-Webserver1-IP:80 
+        server webserver2 Your-Webserver2-IP:80 
 ```
 
 `
