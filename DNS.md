@@ -1,9 +1,10 @@
-# Ubuntu 16.04 Authoritative-Only DNS using BIND
-
-To get more info about DNS, visit: https://www.cloudflare.com/learning/dns/what-is-dns/
 
 
-We will be using Master-server hierarchy for this blog.
+
+
+# Authoritative-Only BIND DNS Server on Ubuntu 18.04
+
+
 
 The master server holds the zone files for answering queries, slave comes in to play as a backup server in case of emergencies or system failures. 
 
@@ -276,7 +277,8 @@ dig -t ns 34.90.10.12
 `netstat -nltp` gives you the ports open on the machine. Check it for port 53.
 
 
-https://intodns.com/ is a great site to test the validity of your DNS setup.
+
+
 
 
 
