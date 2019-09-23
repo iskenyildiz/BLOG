@@ -45,3 +45,8 @@ wget http://file.zip > filename
 open `sudo visudo`
 
 add `Defaults        env_reset,timestamp_timeout=20`
+
+
+### To see currently available and used space
+
+`free -h`
