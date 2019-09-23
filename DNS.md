@@ -1,4 +1,4 @@
-I first started by making my own DNS servers to learn how the system works on my first week as an intern.
+
 
 
 
